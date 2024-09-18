@@ -7,30 +7,23 @@ Algoritmo "semnome"
 Var
 // Seção de Declarações das variáveis 
 n: vetor[0..4] de real
-i, acima: inteiro
+i: inteiro
 media, soma: real
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
 para i de 0 ate 4 faca
-escreval("Digite suas notas:")
+escreval("Escreva seu salário: ")
 leia(n[i])
-se n[i] >= 8 entao
-acima <- acima + 1
-fimse
-soma <- n[i] + soma
+soma <- soma + n[i]
 fimpara
 
 media <- (soma) / 5
-escreval("-----------------")
-escreval("A média de todos esses valores é: ", media)
-escreval("Existem ", acima, " números acima da média, sendo eles")
-
+escreval("-----------------------")
+escreval("Os salários que vocês disseram são: ")
 para i de 0 ate 4 faca
-se n[i] >= 8 entao
 escreval(n[i])
-fimse
 fimpara
-
+escreval("A média de todos esses salários é: ", media)
 
 Fimalgoritmo

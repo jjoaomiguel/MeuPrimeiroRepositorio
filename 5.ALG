@@ -3,23 +3,20 @@ Algoritmo "semnome"
 // Professor   : Antonio Carlos Nicolodi 
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 16/09/2024
+// Data atual  : 18/09/2024
 Var
 // Seção de Declarações das variáveis 
-n: vetor[0..2] de real
+n: vetor[0..6] de inteiro
 i: inteiro
-media, soma: real
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc...
-para i de 0 ate 2 faca
-escreval("Digite suas notas:")
-leia(n[i])
-soma <- n[i] + soma
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+para i de 0 ate 6 faca
+n[i]<- randi(10)
 fimpara
 
-media <- (soma) / 3
-escreval("A média dessas 3 notas são: " , media)
-
+para i de 0 ate 6 faca
+escreval(n[i])
+fimpara
 
 Fimalgoritmo

@@ -6,31 +6,22 @@ Algoritmo "semnome"
 // Data atual  : 18/09/2024
 Var
 // Seção de Declarações das variáveis 
-n: vetor[0..4] de real
-i, acima: inteiro
-media, soma: real
+An: vetor[0..4] de real
+Bn: vetor[0..4] de real
+i: inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
 para i de 0 ate 4 faca
-escreval("Digite suas notas:")
-leia(n[i])
-se n[i] >= 8 entao
-acima <- acima + 1
-fimse
-soma <- n[i] + soma
+escreval("Digite um número:")
+leia(An[i])
 fimpara
 
-media <- (soma) / 5
-escreval("-----------------")
-escreval("A média de todos esses valores é: ", media)
-escreval("Existem ", acima, " números acima da média, sendo eles")
-
+escreval("-----------------------")
+escreval("Os valores de B, multiplicados por 5 são: ")
 para i de 0 ate 4 faca
-se n[i] >= 8 entao
-escreval(n[i])
-fimse
+Bn[i] <- An[i] * 5
+escreval(Bn[i])
 fimpara
-
 
 Fimalgoritmo

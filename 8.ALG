@@ -6,20 +6,39 @@ Algoritmo "semnome"
 // Data atual  : 18/09/2024
 Var
 // Seção de Declarações das variáveis 
-n: vetor[0..3] de caractere
+n: vetor [0..9] de inteiro
 i: inteiro
+j: inteiro
+valor: inteiro
+x: inteiro
+
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-para i de 0 ate 3 faca
-escreval("Escreva o nome de 04 Unidades Curriculares de DS")
-leia(n[i])
+
+para i de 0 ate 9 faca
+N[i] <- randi (99)
+
+
 fimpara
 
-escreval("-----------------")
-escreval("Os componentes curriculares que você falou são:")
-para i de 0 ate 3 faca
-escreval(n[i])
+para i de 0 ate 9 faca
+para j de i + 0 ate 9 faca
+se(N[i] > N[j]) então
+x <- N[i]
+N[i] <- N[j]
+N[j] <- x
+fimse
 fimpara
+fimpara
+
+
+
+
+para i de 0 ate 9 faca
+escreval("Valor da Posição", i, " = ", N[i])
+fimpara
+
+
 
 Fimalgoritmo
