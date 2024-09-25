@@ -3,23 +3,29 @@ Algoritmo "semnome"
 // Professor   : Antonio Carlos Nicolodi 
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 16/09/2024
+// Data atual  : 23/09/2024
 Var
 // Seção de Declarações das variáveis 
-n: vetor[0..2] de real
-i: inteiro
-media, soma: real
+base: inteiro
+expoente: inteiro
+resultado: inteiro
+contadora: inteiro
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc...
-para i de 0 ate 2 faca
-escreval("Digite suas notas:")
-leia(n[i])
-soma <- n[i] + soma
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+escreval("Digite um número inteiro: ")
+leia(base)
+
+escreval("Digite um número inteiro, de preferência menor que o primeiro: ")
+leia(expoente)
+resultado <- base * base
+expoente <- expoente -1
+
+para contadora de 2 ate expoente faca
+resultado <- base * resultado
 fimpara
 
-media <- (soma) / 3
-escreval("A média dessas 3 notas são: " , media)
-
+escreval(resultado)
 
 Fimalgoritmo

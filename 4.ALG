@@ -1,29 +1,30 @@
 Algoritmo "semnome"
 // Disciplina   : [Linguagem e Lógica de Programação]
-// Professor   : Antonio Carlos Nicolodi 
+// Professor   : Antonio Carlos Nicolodi
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 18/09/2024
+// Data atual  : 25/09/2024
 Var
-// Seção de Declarações das variáveis 
-n: vetor[0..4] de real
-i: inteiro
-media, soma: real
+   // Seção de Declarações das variáveis
+   numero: vetor [0..29] de inteiro
+   i: inteiro
+   j: inteiro
+   chave: inteiro
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
-para i de 0 ate 4 faca
-escreval("Escreva seu salário: ")
-leia(n[i])
-soma <- soma + n[i]
-fimpara
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 0 ate 29 faca
+      numero[i]<- Randi(15)
+   fimpara
 
-media <- (soma) / 5
-escreval("-----------------------")
-escreval("Os salários que vocês disseram são: ")
-para i de 0 ate 4 faca
-escreval(n[i])
-fimpara
-escreval("A média de todos esses salários é: ", media)
+   Escreval ("Digite um número de 1 a 15")
+   Leia (chave)
+
+   para i de 0 ate 29 faca
+      se (numero[i] = chave) então
+         escreval ("Encontrado na posição", i)
+      fimse
+   fimpara
+
 
 Fimalgoritmo

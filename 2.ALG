@@ -1,36 +1,41 @@
 Algoritmo "semnome"
 // Disciplina   : [Linguagem e Lógica de Programação]
-// Professor   : Antonio Carlos Nicolodi 
+// Professor   : Antonio Carlos Nicolodi
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 18/09/2024
+// Data atual  : 23/09/2024
 Var
-// Seção de Declarações das variáveis 
-n: vetor[0..4] de real
-i, acima: inteiro
-media, soma: real
+   // Seção de Declarações das variáveis
+   Pn: vetor[0..9] de inteiro
+   In: vetor[0..9] de inteiro
+   i: inteiro
+   numero: inteiro
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
-para i de 0 ate 4 faca
-escreval("Digite suas notas:")
-leia(n[i])
-se n[i] >= 8 entao
-acima <- acima + 1
-fimse
-soma <- n[i] + soma
-fimpara
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 0 ate 9 faca
+      escreval("Digite um número: ")
+      leia(numero)
+      se numero < 0 entao
+         escreval("Infelizmente números abaixo de 0 não são aceitos")
+         escreval("Digite outro número:")
+         leia(numero)
+      fimse
+      se (numero mod 2 = 0) entao
+         Pn[i] <- numero
+      senao
+         In[i] <- numero
+      fimse
+   fimpara
 
-media <- (soma) / 5
-escreval("-----------------")
-escreval("A média de todos esses valores é: ", media)
-escreval("Existem ", acima, " números acima da média, sendo eles")
-
-para i de 0 ate 4 faca
-se n[i] >= 8 entao
-escreval(n[i])
-fimse
-fimpara
-
+   escreval("------------")
+   para i de 0 ate 9 faca
+   se (Pn[i] <> 0) entao
+      escreval(Pn[i])
+   fimse
+   se (In[i] <> 0) entao
+      escreval(In[i])
+   fimse
+   fimpara
 
 Fimalgoritmo

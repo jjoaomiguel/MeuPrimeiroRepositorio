@@ -1,25 +1,21 @@
 Algoritmo "semnome"
 // Disciplina   : [Linguagem e Lógica de Programação]
-// Professor   : Antonio Carlos Nicolodi 
+// Professor   : Antonio Carlos Nicolodi
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 18/09/2024
+// Data atual  : 23/09/2024
 Var
-// Seção de Declarações das variáveis 
-n: vetor[0..3] de caractere
-i: inteiro
-
+// Seção de Declarações das variáveis
+ v: vetor[0..9] de inteiro
+ i:inteiro
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
-para i de 0 ate 3 faca
-escreval("Escreva o nome de 04 Unidades Curriculares de DS")
-leia(n[i])
-fimpara
+// Seção de Comandos, procedimento, funções, operadores, etc...
+para i de 0 até 9 faça
+        v[i] <- (i mod 2 + 3)  + (i mod 2)
+      fimpara
 
-escreval("-----------------")
-escreval("Os componentes curriculares que você falou são:")
-para i de 0 ate 3 faca
-escreval(n[i])
-fimpara
-
+    escreval( "vetor preenchido:" )
+     para i de 0 até 9 faça
+        escreval (v[i])
+    fimpara
 Fimalgoritmo
